@@ -1,0 +1,41 @@
+-- ALTERING AND DROPPING VIEWS
+
+  -- ONCE YOU CREATED A VIEW AND YOU REALIZE THAT YOUR QUERY HAD A PROBLEM 
+  -- AND YOU NEED TO CHECK YOUR VIEW
+   -- SO WE CAN DROP THE VIEW AND CREATE IT BACK 
+		-- OR
+	-- USE CREATE OR REPLACE 
+   
+-- DROPPING THE VIEW
+
+DROP VIEW sales_by_client;
+-- OUR VIEW IS DELETED
+
+
+-- RECREATING THE VIEW
+CREATE VIEW sales_by_client AS 
+SELECT
+c.client_id,
+c.name,
+SUM(invoice_total) AS total_sales
+FROM clients c
+JOIN invoices i	USING(client_id)
+GROUP BY client_id, name;
+
+-- REPLACE 
+ -- WE HAVE TO USE 'CREATE OR REPLACE' THE VIEW BECAUSE WE DO NOT HAVE TO EXPLICITELY DROP THE VIEW
+
+CREATE OR REPLACE VIEW sales_by_client AS 
+SELECT
+c.client_id,
+c.name,
+SUM(invoice_total) AS total_sales
+FROM clients c
+JOIN invoices i	USING(client_id)
+GROUP BY client_id, name;
+ 
+ -- WHAT IF THE QUERY IS DELETED 
+ -- HOW TO ALTER THE VIEW
+ -- MANY PEOPLE SAVE THE CODE AS A SQL FILE AND SAVE IT AS A SOURCE CODE
+ -- AND SHARE IT IN GITHUB
+ 
