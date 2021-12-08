@@ -1,0 +1,15 @@
+-- OTHER CONVENTIONS
+
+-- IN DIFFERENT ORGANIZATIONS, PEOPLE ADOPT DIFFERENT CONVENTIONS
+-- SOME LIKE TO PREFIX THEIR FUNCTIONS TO 'fn'
+-- AND PROCEDURES TO 'proc'
+-- SOME PEOPLE USE CAMELCASE FOR Eg procGetRiskFactor -- in camelcase we capitalise every word except first word
+-- some people use DELIMITER $$ AND SOME PEOPLE USE DELIMITER //
+
+-- again some people love it some people hate it, dont waste your time arguing about it
+-- there is nothing as very best naming convention
+-- you can never make everybody happy
+
+-- IT IS ADVISED TO ADOPT THE CONVENTION WHEREEVER YOU WORK AT
+-- DONT TRY TO REINVENT THE WILL, BECAUSE MOST OF THE TIME YOU WILL BE WORKING AT APPLICATIONS THAT WERE ALREADY BUILT
+-- THEY MIGHT BE FEW MONTHS OR FEW YEARS OLD

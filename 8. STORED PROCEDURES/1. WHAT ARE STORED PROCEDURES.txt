@@ -1,0 +1,46 @@
+-- STORED PROCEDURES
+
+	-- AT THIS POINT YOU KNOW HOW TOWRITE THE COMPLEX QUERIES
+	-- HOW TO SIMPLIFY THEM STORING THEM IN VIEWS 
+	-- HOW TO INSERT THE UPDATES 
+	-- DELETE DATA USING SQL STATEMENTS
+
+  -- NOW LETS SAY YOU ARE BUILDING AN APPLICATION THAT HAS DATABASE, WHERE ARE YOU GOING TO WRITE THESE SQL CODES
+  -- YOU WILL NOT WRITE THEM IN YOUR APPLICATION CODE
+  -- ONE REASON BEING THAT IT WILL MAKE YOUR CODE MESSY AND HARD TO READ 
+	-- FOR eg BUILDING AN APPLICATION WITH C# / JAVA / PYTHON YOU DON'T WANT TO MIX YOUR JAVA CODE WITH SQL
+		----------------------------------------------------------------------------------------------------------
+
+          		public class car
+			{	
+			    public void Drive() {
+				sql = "SELECT * FROM engine_attributes WHERE car_id = 1"
+				command = new sqlcommand()
+				}
+			}
+		----------------------------------------------------------------------------------------------------------
+
+	-- and sql code comes in the way and makes code messy and hard to maintain
+	-- and in programming languages like java,c# requires compilation
+
+		C# -------------> machine code
+		   compilation
+	-- to change one of your query you have to recompile your application code for these changes to take effect
+	-- so every time you make a change in your sql code you have to recompile and potentially redeploy your application 
+
+-- FOR THIS REASON YOU SHOULD TAKE YOUR SQL CODE OUT OF YOUR APPLICATION CODE AND STORE IT IN A DATABASE WHERE IT BELONGS
+-- 		BUT WHERE?????
+	-- INSIDE A STORED PROCEDURE OR A FUNCTION
+		   ''''''''''''''''''
+	-- A STORED PROCEDURE IS A DB OBJECT THAT CONTAINS A BLOCK OF SQL CODE 
+	-- IN OUR APPLICATION CODE WE SIMPLY CALL THESE PROCEDURES TO GET THE SAVED DATA 
+	-- SO WE USE STORED PROCEDURES TO STORE AND ORGANIZE OUR CODE 
+	-- BUT STORED PROCEDURES HAVE OTHER BENEFITS 
+		-- MOST DB MANAGEMENT SYSTEMS PERFORM SOME KIND OF OPTIMIZATION IN A CODE IN A STORED PROCEDURES
+		-- SO SQL CODE IN STORE PROCEDURE CAN SOMETIMES BE EXECUTED FASTER 
+		-- ALSO JUST LIKE VIEWS STORE PROCEDURE PROVIDE US DATA SECURITY
+		-- FOR eg WE CAN REMOVE DIRECT EXCESS TO THE TABLES AND ALLOW VARIOUS OPERATIONS
+		-- UPADATING, DELETING, INSERTING etc TO BE PERFOREMED BY STORED PROCEDURES
+		-- THEN WE CAN DECIDE WHO CAN EXECUTE WHICH STORE PROCEDURE  
+		-- THIS WILL LIMIT WHAT USER CAN DO WITH OUR DATA
+		-- FOR eg WE CAN LIMIT USERS WHO CAN DELETE OUR DATA
