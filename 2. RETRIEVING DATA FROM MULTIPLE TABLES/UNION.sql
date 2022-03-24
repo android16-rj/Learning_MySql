@@ -1,7 +1,7 @@
 -- unions
 
 -- using joins we combined the columns from multiple tables
---  in swql we can combine rows to, and this is powerful
+--  in sql we can combine rows to, and this is powerful
 
 -- demonstration : there order placed in the current year and previous year
 -- we gonna label the orders, order placed in current year as Active and orders placed in previous year as Archived
