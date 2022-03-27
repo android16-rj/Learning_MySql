@@ -13,7 +13,7 @@ FROM orders o
 JOIN customers c
 using (customer_id) -- earlier we used 'ON o.customer_id = c.customer_id'
 LEFT JOIN shippers sh
-USING (shipper_id); -- likesise we can join another table/ using caluse only applicable if we have same column name.
+USING (shipper_id); -- likewise we can join another table/ using caluse only applicable if we have same column name.
 
 
 -- Exercise, in our order items table we have composite primary key we should join the order item notes table
